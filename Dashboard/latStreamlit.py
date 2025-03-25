@@ -42,21 +42,29 @@ elif option == "Trend Pasar":
     data2012 = df[df['yr'] == 1].groupby('mnth')['cnt'].sum().sort_index()
 
     # Plot
-    fig, ax = plt.subplots(figsize=(10, 5))
+    
     if year_option == "2011":
+        fig, ax = plt.subplots(figsize=(10, 5))
         ax.plot(data2011.index, data2011.values, label='2011', marker='o', color='orange')
+        ax.set_title("Total Bike Rentals per Month")
+        ax.set_xlabel("Month")
+        ax.set_ylabel("Total Rentals (cnt)")
+        ax.grid(True)
+        ax.legend()
+        st.pyplot(fig)
     elif year_option == "2012":
+        fig, ax = plt.subplots(figsize=(10, 5))
         ax.plot(data2012.index, data2012.values, label='2012', marker='o', color='skyblue')
+        ax.set_title("Total Bike Rentals per Month")
+        ax.set_xlabel("Month")
+        ax.set_ylabel("Total Rentals (cnt)")
+        ax.grid(True)
+        ax.legend()
+        st.pyplot(fig)
     else:
-        ax.plot(data2011.index, data2011.values, label='2011', marker='o', color='orange')
-        ax.plot(data2012.index, data2012.values, label='2012', marker='o', color='skyblue')
+        st.image("https://raw.githubusercontent.com/Occolus/latihanOlahData/d356259579b545127823652ee5928779840a85bb/Data/data20112012.png")
 
-    ax.set_title("Total Bike Rentals per Month")
-    ax.set_xlabel("Month")
-    ax.set_ylabel("Total Rentals (cnt)")
-    ax.grid(True)
-    ax.legend()
-    st.pyplot(fig)
+
 
     st.write("Dari grafik di atas, terlihat adanya peningkatan signifikan dari tahun 2011 ke 2012, yang menunjukkan tren pasar yang positif.")
 
