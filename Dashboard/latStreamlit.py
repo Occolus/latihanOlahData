@@ -78,7 +78,7 @@ if option == "Potensi":
     st.write("Berdasarkan analisis pengaruh cuaca terhadap penggunaan sepeda, terlihat bahwa cuaca cerah (Clear) memiliki pengaruh yang sangat signifikan terhadap tingginya penggunaan sepeda. Bulan September menunjukkan lonjakan drastis dalam penggunaan sepeda, dibandingkan dengan bulan November yang cenderung lebih rendah, terutama saat cuaca sedikit hujan atau hujan deras. Hal ini menyoroti tantangan terbesar bagi penyedia layanan bike-sharing, yaitu pengaruh cuaca yang kurang mendukung, di mana penggunaan sepeda menjadi jauh lebih sedikit saat cuaca buruk. Grafik yang menunjukkan penggunaan sepeda selama cuaca cerah dan hujan menunjukkan perbedaan yang jelas, dengan grafik hijau dan oranye yang mencerminkan penurunan penggunaan saat cuaca hujan.")
 
 # Halaman Trend Pasar
-elif option == "Trend Pasar":
+elif option == "Trend Tahunan":
     st.write("### 📈 Tren Pasar Berdasarkan Tahun")
 
     year_option = st.selectbox("Pilih tahun:", ["Keduanya", "2011", "2012"])
