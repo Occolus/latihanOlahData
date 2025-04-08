@@ -70,7 +70,7 @@ if option == "Potensi":
         ax.set_xlabel('Weather Condition') 
         ax.set_ylabel('Total Users') 
         ax.legend()
-
+        ax.ticklabel_format(axis='y',style='plain',scilimits=(0,0))
         st.pyplot(fig) 
 
    
